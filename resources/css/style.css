@@ -23,11 +23,11 @@ h5{
   font-size: .8rem;
   margin-top: 1.778rem;
 }
-a{
+a, a:visited{
   color: #F80;
   text-decoration: none;
 }
-a:hover, a:visited, a:active{
+a:hover, a:active{
   color: #ffc380;
   text-decoration: none;
 }
