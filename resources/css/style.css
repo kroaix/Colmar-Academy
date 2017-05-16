@@ -34,12 +34,23 @@ h5{
   margin-top: 1.778rem;
 }
 a, a:visited{
-  color: #F80;
+  color: #333;
   text-decoration: none;
 }
 a:hover, a:active{
-  color: #ffc380;
-  text-decoration: none;
+  color: #EA7B48;
+}
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #EA7B48;
+    transition: width .3s;
+}
+a:hover::after {
+    width: 100%;
+    transition: width .3s;
 }
 .flex{
   display: flex;
@@ -49,9 +60,6 @@ section, footer{
   top: 64px;
   position: relative;
   align-items: center;
-}
-section:nth-child(even){
-  background: #CCC;
 }
 .left{
   width: 60%;
@@ -104,6 +112,10 @@ nav ul li{
 }
 
 /*================================================= MAIN BANNER STYLES*/
+.banner, .learning-container{
+  background: #3E3E3E;
+  color: #FFF;
+}
 .banner .right .content {
   margin-right: 25%;
 }
@@ -120,7 +132,7 @@ nav ul li{
 }
 .btn{
   width: 90%;
-  background: #333;
+  background: #CB5018;
   color: #FFF;
   border: none;
   padding: .8rem;
@@ -131,7 +143,7 @@ nav ul li{
   transition: background 700ms ease-in-out;
 }
 .btn:hover{
-  background: #F80;
+  background: #EA7B48;
 }
 
 /*================================================= INFORMATION STYLES*/
@@ -139,9 +151,16 @@ nav ul li{
   border-bottom: 1px solid #CCC;
   padding: .65rem 0;
 }
-.info:hover{
-  background: #333;
+.info:hover:nth-child(odd){
+  background: #226a62;
   color: #FFF;
+}
+.info:hover:nth-child(even){
+  background: #6b952c;
+  color: #FFF;
+}
+.info:hover a{
+  color: #EA7B48;
 }
 .information .left{
   border-right: 1px solid #CCC;
@@ -184,11 +203,34 @@ nav ul li{
   width: 290px;
   height: 340px;
 }
+.courses{
+  color: #333;
+}
+.courses div:hover{
+  color: #FFF;
+  background: #EA7B48;
+}
 .course-content{
   padding-left: 0.8889rem;
 }
 .course-content p{
   margin: 0.4444rem 0;
+}
+.courses a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #333;
+    color: #333;
+    transition: width .3s;
+}
+.courses a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.courses a:hover{
+  color: #333;
 }
 
 /*================================================= THESIS STYLES*/
@@ -208,8 +250,12 @@ nav ul li{
   border-bottom: 1px solid #CCC;
   padding: .65rem 0;
 }
-.exhibit:hover{
-  background: #333;
+.exhibit:hover:nth-child(odd){
+  background: #226a62;
+  color: #FFF;
+}
+.exhibit:hover:nth-child(even){
+  background: #6b952c;
   color: #FFF;
 }
 .exhibit-image img{
@@ -257,12 +303,6 @@ footer ul li{
 @media only screen and (max-width: 1280px){
   .learning{
     width: 980px;
-  }
-  section:nth-child(even){
-    background: #FFF;
-  }
-  section:first-of-type{
-    background: #CCC;
   }
 }
 @media only screen and (min-width: 891px){
@@ -353,6 +393,15 @@ footer ul li{
     margin: 0;
     padding: 0;
   }
+  .learning-mobile ul li a{
+    color: #FFF;
+  }
+  .learning-mobile ul li a:hover{
+    color: #EA7B48;
+  }
+  .thesis .right{
+    margin-top: -90px;
+  }
 }
 @media only screen and (max-width: 760px){
   h1{
@@ -380,7 +429,6 @@ footer ul li{
   }
   .banner .right{
     width: 100%;
-    background: #CCC;
   }
   .banner .right .content{
     margin: 0 auto;
@@ -428,6 +476,14 @@ footer ul li{
   }
   .learning-mobile{
     padding: 0.8889rem;
+    background: #FFF;
+    color: #333;
+  }
+  .learning-mobile ul li a{
+    color: #FFF;
+  }
+  .learning-mobile ul li a:hover{
+    color: #EA7B48;
   }
   .learning-mobile h2{
     text-align: center;
