@@ -242,21 +242,19 @@ footer ul{
 footer ul li{
   padding: 0 0.4444rem;
 }
-@media only screen and (min-width: 1280px){
-  .learning-mobile{
-    display: none;
-  }
-}
 @media only screen and (max-width: 1280px){
   .learning{
     width: 980px;
   }
+  section:nth-child(even){
+    background: #FFF;
+  }
+  section:first-of-type{
+    background: #CCC;
+  }
 }
 @media only screen and (min-width: 891px){
-  .info-image-mobile{
-    display: none;
-  }
-  .mobile-nav{
+  .info-image-mobile, .mobile-nav, .learning-mobile{
     display: none;
   }
 }
@@ -448,12 +446,6 @@ footer ul li{
     border: none;
     font-size: .8em;
     text-align: center;
-  }
-  section:nth-child(even){
-    background: #FFF;
-  }
-  section:first-of-type{
-    background: #CCC;
   }
   section, footer{
     margin: 0;
