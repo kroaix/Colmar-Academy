@@ -1,4 +1,14 @@
-
+/*================================================= UNIVERSAL STYLES*/
+html{
+  font-size: 18px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+}
 h1{
   font-size: 3rem;
   font-weight: 700;
@@ -31,16 +41,26 @@ a:hover, a:active{
   color: #ffc380;
   text-decoration: none;
 }
-html{
-  font-size: 18px;
+.flex{
+  display: flex;
+  align-items: center;
 }
-body{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.4;
+section, footer{
+  top: 64px;
+  position: relative;
+  align-items: center;
 }
+section:nth-child(even){
+  background: #CCC;
+}
+.left{
+  width: 60%;
+}
+.right{
+  width: 40%
+}
+
+/*================================================= HEADER STYLES*/
 header{
   align-items: center;
   height: 3.556rem;
@@ -82,30 +102,8 @@ nav ul{
 nav ul li{
   padding: 0 0.4444rem;
 }
-.flex{
-  display: flex;
-  align-items: center;
-}
-section, footer{
-  top: 64px;
-  position: relative;
-  align-items: center;
-}
-section:nth-child(even){
-  background: #CCC;
-}
-.left{
-  width: 60%;
-}
-.right{
-  width: 40%
-}
-.image-container{
-  padding: 1.778rem 2.222rem 1.778rem 1.333rem;
-}
-.image-container img{
-  max-width: 100%;
-}
+
+/*================================================= MAIN BANNER STYLES*/
 .banner .right .content {
   margin-right: 25%;
 }
@@ -113,6 +111,12 @@ section:nth-child(even){
   font-size: 1.5rem;
   margin: 1.333rem 0;
   font-weight: 400;
+}
+.image-container{
+  padding: 1.778rem 2.222rem 1.778rem 1.333rem;
+}
+.image-container img{
+  max-width: 100%;
 }
 .btn{
   width: 90%;
@@ -129,9 +133,8 @@ section:nth-child(even){
 .btn:hover{
   background: #F80;
 }
-.information .left{
-  border-right: 1px solid #CCC;
-}
+
+/*================================================= INFORMATION STYLES*/
 .info{
   border-bottom: 1px solid #CCC;
   padding: .65rem 0;
@@ -139,6 +142,9 @@ section:nth-child(even){
 .info:hover{
   background: #333;
   color: #FFF;
+}
+.information .left{
+  border-right: 1px solid #CCC;
 }
 .info-image img{
   padding: 0.8889rem;
@@ -155,35 +161,7 @@ section:nth-child(even){
   border: none;
 }
 
-.exhibit{
-  border-bottom: 1px solid #CCC;
-  padding: .65rem 0;
-}
-.exhibit:hover{
-  background: #333;
-  color: #FFF;
-}
-.exhibit-image img{
-  padding: 0.8889rem;
-  width: 80%;
-}
-.exhibit-content{
-  width: 90%;
-  margin-right: 5%;
-}
-.exhibit-content p{
-  margin-bottom: 1rem;
-}
-.exhibit:last-child{
-  border: none;
-}
-.left .exhibit-container p{
-  margin-right: 20%;
-}
-.thesis .right{
-  margin-top: -175px;
-}
-
+/*================================================= LEARNING STYLES*/
 .learning{
   width: 1200px;
   margin: 0 auto;
@@ -212,14 +190,44 @@ section:nth-child(even){
 .course-content p{
   margin: 0.4444rem 0;
 }
-.thesis .left{
-  padding: 1.778rem 2.222rem 1.778rem 1.333rem;
-}
+
+/*================================================= THESIS STYLES*/
 .exhibit{
   border: none;
 }
 .thesis{
   margin-bottom: 1.778rem;
+}
+.thesis .right{
+  margin-top: -175px;
+}
+.thesis .left{
+  padding: 1.778rem 2.222rem 1.778rem 1.333rem;
+}
+.exhibit{
+  border-bottom: 1px solid #CCC;
+  padding: .65rem 0;
+}
+.exhibit:hover{
+  background: #333;
+  color: #FFF;
+}
+.exhibit-image img{
+  padding: 0.8889rem;
+  width: 80%;
+}
+.exhibit-content{
+  width: 90%;
+  margin-right: 5%;
+}
+.exhibit-content p{
+  margin-bottom: 1rem;
+}
+.exhibit:last-child{
+  border: none;
+}
+.left .exhibit-container p{
+  margin-right: 20%;
 }
 video{
   max-width: 100%;
@@ -228,6 +236,8 @@ video{
 .left .video-container p{
   margin-right: 15%;
 }
+
+/*================================================= FOOTER STYLES*/
 footer{
   border-top: 1px solid #CCC;
   padding: 0 1.333rem;
@@ -242,6 +252,8 @@ footer ul{
 footer ul li{
   padding: 0 0.4444rem;
 }
+
+/*================================================= MEDIA QUERIES*/
 @media only screen and (max-width: 1280px){
   .learning{
     width: 980px;
